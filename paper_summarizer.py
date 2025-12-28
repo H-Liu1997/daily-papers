@@ -7,7 +7,7 @@ import tempfile
 import time
 import google.generativeai as genai
 
-def sync_to_notion(papers, summaries, database_id, tags=None, date_str=None):
+def sync_to_notion(papers, summaries, database_id, date_str=None):
     """Sync papers to Notion database"""
     notion_token = os.getenv('NOTION_API_KEY')
     if not notion_token:
@@ -20,20 +20,19 @@ def sync_to_notion(papers, summaries, database_id, tags=None, date_str=None):
         "Notion-Version": "2022-06-28"
     }
     
-    if tags is None:
-        tags = []
-    
     for paper, summary in zip(papers, summaries):
         if isinstance(summary, dict):
             input_output = (summary.get('input_output') or '')[:2000]
             problem = (summary.get('problem') or '')[:2000]
             solution = (summary.get('solution') or '')[:2000]
+            category = summary.get('category', 'other')
         else:
             input_output = str(summary)[:2000] if summary else ""
             problem = ""
             solution = ""
+            category = "other"
         
-        tag_options = [{"name": t} for t in tags] if tags else []
+        tag_options = [{"name": category}] if category else []
         
         page_data = {
             "parent": {"database_id": database_id},
@@ -140,17 +139,19 @@ def summarize_paper(model, paper, pdf_file=None, max_retries=3):
     
     prompt = """Read this paper and extract implementation details in Chinese.
 
-Return ONLY valid JSON. All three values MUST be plain strings (NOT nested objects):
+Return ONLY valid JSON. All values MUST be plain strings (NOT nested objects):
 {
   "input_output": "任务: xxx。输入: 具体模态。输出: 具体模态。Backbone: 具体模型名。数据集: 具体名称。",
   "problem": "之前方法的技术局限。",
-  "solution": "1. 模型结构: xxx。2. 训练: loss/lr/steps。3. 推理流程: xxx。4. 实验结果: 具体指标。"
+  "solution": "1. 模型结构: xxx。2. 训练: loss/lr/steps。3. 推理流程: xxx。4. 实验结果: 具体指标。",
+  "category": "Choose ONE from: video generation, motion generation, image generation, understanding, language model, reinforcement learning, 3D, audio, other"
 }
 
 CRITICAL: 
 - All values must be plain strings, NOT nested JSON objects
 - Be specific: model names, dataset names, loss functions, learning rates, training steps, benchmark scores
-- 全部用中文"""
+- category must be exactly one of the listed options in English
+- Other fields in Chinese"""
 
     for attempt in range(max_retries + 1):
         try:
@@ -300,7 +301,7 @@ def main(date_str=None, top_n=None, keywords=None, notion_db=None, tags=None):
     
     if notion_db:
         print("Syncing to Notion...")
-        sync_to_notion(papers, summaries, notion_db, tags, date_str)
+        sync_to_notion(papers, summaries, notion_db, date_str)
     
     print("Done!")
 
