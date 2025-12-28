@@ -3,6 +3,8 @@ import json
 import datetime
 import requests
 import pytz
+import tempfile
+import time
 import google.generativeai as genai
 
 def sync_to_notion(papers, summaries, database_id, tags=None, date_str=None):
@@ -106,55 +108,73 @@ def is_chinese(text):
     chinese_chars = sum(1 for c in text if '\u4e00' <= c <= '\u9fff')
     return chinese_chars > len(text) * 0.1
 
-def summarize_paper(model, paper, max_retries=2):
+def download_pdf(arxiv_id):
+    """Download PDF from arXiv and return the file path"""
+    pdf_url = f"https://arxiv.org/pdf/{arxiv_id}.pdf"
+    try:
+        response = requests.get(pdf_url, timeout=60)
+        if response.status_code == 200:
+            tmp_file = tempfile.NamedTemporaryFile(delete=False, suffix='.pdf')
+            tmp_file.write(response.content)
+            tmp_file.close()
+            return tmp_file.name
+    except Exception as e:
+        print(f"  Failed to download PDF: {e}")
+    return None
+
+def upload_pdf_to_gemini(pdf_path):
+    """Upload PDF to Gemini and return the file object"""
+    try:
+        pdf_file = genai.upload_file(pdf_path, mime_type="application/pdf")
+        while pdf_file.state.name == "PROCESSING":
+            time.sleep(1)
+            pdf_file = genai.get_file(pdf_file.name)
+        if pdf_file.state.name == "ACTIVE":
+            return pdf_file
+    except Exception as e:
+        print(f"  Failed to upload PDF to Gemini: {e}")
+    return None
+
+def summarize_paper(model, paper, pdf_file=None, max_retries=3):
     import re
     
-    prompt1 = f"""Extract technical details from this paper abstract. Return JSON:
+    prompt = """Read this paper and extract implementation details in Chinese.
 
-Title: {paper['title']}
-Abstract: {paper['abstract']}
+Return ONLY valid JSON. All three values MUST be plain strings (NOT nested objects):
+{
+  "input_output": "任务: xxx。输入: 具体模态。输出: 具体模态。Backbone: 具体模型名。数据集: 具体名称。",
+  "problem": "之前方法的技术局限。",
+  "solution": "1. 模型结构: xxx。2. 训练: loss/lr/steps。3. 推理流程: xxx。4. 实验结果: 具体指标。"
+}
 
-{{
-  "task_type": "generation/understanding/other",
-  "input_modality": "text/image/video/audio/...",
-  "output_modality": "text/image/video/...",
-  "backbone": "model name if mentioned, else null",
-  "dataset": "dataset name if mentioned, else null",
-  "key_numbers": "any specific numbers like frames, resolution, etc.",
-  "core_technique": "main technical contribution in 1 sentence"
-}}"""
-
-    prompt2 = f"""Based on the paper, write a technical summary in Chinese.
-
-Title: {paper['title']}
-Abstract: {paper['abstract']}
-
-Return ONLY valid JSON in Chinese (all values must be plain text strings, not nested objects):
-{{
-  "input_output": "任务类型(生成/理解)。输入: xxx。输出: xxx。Backbone: xxx(如有)。数据集: xxx(如有)。",
-  "problem": "具体要解决什么问题，之前方法的局限性是什么。2-3句话。",
-  "solution": "1. 架构: xxx。2. 训练方法: xxx。3. 关键创新: xxx。4. 结果: xxx(如有具体指标)。用纯文本，不要嵌套结构。"
-}}
-
-Requirements:
-- 必须用中文
-- 所有值必须是纯文本字符串
-- 技术细节要具体，如模型名称、训练策略
-- 提及具体数字(帧数、分辨率、性能指标等)"""
+CRITICAL: 
+- All values must be plain strings, NOT nested JSON objects
+- Be specific: model names, dataset names, loss functions, learning rates, training steps, benchmark scores
+- 全部用中文"""
 
     for attempt in range(max_retries + 1):
         try:
-            try:
-                resp1 = model.generate_content(prompt1)
-                _ = resp1.text
-            except:
-                pass
+            if pdf_file:
+                response = model.generate_content([pdf_file, prompt])
+            else:
+                fallback_prompt = f"""Title: {paper['title']}
+Abstract: {paper['abstract']}
+
+{prompt}
+
+注意: 如果abstract中没有某项具体信息，写"文中未说明"。"""
+                response = model.generate_content(fallback_prompt)
             
-            response = model.generate_content(prompt2)
             content = response.text
+            if not content or not content.strip():
+                print(f"  Retry {attempt+1}: Gemini returned empty text")
+                continue
             content = re.sub(r'```json\s*', '', content)
             content = re.sub(r'```\s*', '', content)
             json_match = re.search(r'\{[\s\S]*\}', content)
+            if not json_match:
+                print(f"  Retry {attempt+1}: No JSON found in response")
+                continue
             if json_match:
                 result = json.loads(json_match.group())
                 for k, v in result.items():
@@ -163,6 +183,12 @@ Requirements:
                     elif isinstance(v, list):
                         result[k] = ' '.join([str(item) for item in v])
                 all_text = ' '.join([str(v) for v in result.values()])
+                if not all_text.strip():
+                    print(f"  Retry {attempt+1}: empty response")
+                    if pdf_file and attempt == 0:
+                        print(f"  Falling back to abstract...")
+                        pdf_file = None
+                    continue
                 if is_chinese(all_text):
                     return result
                 elif attempt < max_retries:
@@ -173,6 +199,9 @@ Requirements:
                     return result
         except Exception as e:
             print(f"  Error: {e}")
+            if pdf_file and attempt == 0:
+                print(f"  Falling back to abstract...")
+                pdf_file = None
     
     return {"input_output": "", "problem": "", "solution": ""}
 
@@ -240,8 +269,28 @@ def main(date_str=None, top_n=None, keywords=None, notion_db=None, tags=None):
     summaries = []
     for i, paper in enumerate(papers, 1):
         print(f"Summarizing {i}/{len(papers)}: {paper['title'][:50]}...")
-        summary = summarize_paper(model, paper)
+        
+        pdf_file = None
+        pdf_path = download_pdf(paper['id'])
+        if pdf_path:
+            print(f"  Downloaded PDF, uploading to Gemini...")
+            pdf_file = upload_pdf_to_gemini(pdf_path)
+            if pdf_file:
+                print(f"  Reading full paper...")
+            else:
+                print(f"  PDF upload failed, falling back to abstract")
+            os.unlink(pdf_path)
+        else:
+            print(f"  PDF download failed, using abstract only")
+        
+        summary = summarize_paper(model, paper, pdf_file=pdf_file)
         summaries.append(summary)
+        
+        if pdf_file:
+            try:
+                genai.delete_file(pdf_file.name)
+            except:
+                pass
     
     if date_str is None:
         beijing_tz = pytz.timezone('Asia/Shanghai')
