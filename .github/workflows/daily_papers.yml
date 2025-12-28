@@ -4,7 +4,12 @@ on:
   schedule:
     # Run at 9:00 AM Beijing Time (1:00 AM UTC)
     - cron: '0 1 * * *'
-  workflow_dispatch:  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Date to fetch (YYYY-MM-DD, leave empty for today)'
+        required: false
+        default: ''
 
 jobs:
   sync-papers:
@@ -24,12 +29,20 @@ jobs:
       
       - name: Download paper metadata
         run: |
-          python Paper_metadata_download.py
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            python Paper_metadata_download.py --date "${{ github.event.inputs.date }}"
+          else
+            python Paper_metadata_download.py
+          fi
       
       - name: Run paper summarizer
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
         run: |
-          python paper_summarizer.py --top 10 --notion "${{ secrets.NOTION_DATABASE_ID }}"
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            python paper_summarizer.py --date "${{ github.event.inputs.date }}" --top 10 --notion "${{ secrets.NOTION_DATABASE_ID }}"
+          else
+            python paper_summarizer.py --top 10 --notion "${{ secrets.NOTION_DATABASE_ID }}"
+          fi
 
