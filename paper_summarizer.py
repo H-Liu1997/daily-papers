@@ -3,7 +3,7 @@ import json
 import datetime
 import requests
 import pytz
-from openai import OpenAI
+import google.generativeai as genai
 
 def sync_to_notion(papers, summaries, database_id, tags=None, date_str=None):
     """Sync papers to Notion database"""
@@ -100,40 +100,38 @@ def get_papers(date_str=None):
     valid_papers.sort(key=lambda x: x['upvotes'], reverse=True)
     return valid_papers
 
-def summarize_paper(client, paper, model="gpt-4o-mini"):
-    prompt = f"""Read this paper abstract. Explain it like you're telling a colleague over coffee - no jargon, no paper-speak.
+def summarize_paper(model, paper):
+    import re
+    prompt = f"""Read this paper abstract. Explain it like you're telling a friend - no jargon, no paper-speak.
 
 Title: {paper['title']}
 
 Abstract: {paper['abstract']}
 
-Answer in Chinese, in plain language. Return ONLY valid JSON with these 3 keys:
+Answer in Chinese, in plain human language. Return ONLY valid JSON:
 {{
-  "input_output": "What goes in and out? Be concrete with example. 1-2 sentences.",
+  "input_output": "What goes in and out? Give a concrete example. 1-2 sentences.",
   "problem": "What couldn't we do before? Why does it matter? 1-2 sentences.", 
-  "solution": "What did they build? Core idea simply. 2-3 sentences."
+  "solution": "What's the core idea? How does it work simply? 2-3 sentences."
 }}
 
 Rules:
-- NO academic jargon
-- Be specific, give examples
-- Keep each field under 200 characters if possible"""
+- NO academic jargon like "proposed", "leverages", "achieves SOTA"
+- Use everyday analogies
+- Be specific and concrete"""
 
-    response = client.chat.completions.create(
-        model=model,
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.3
-    )
-    
-    import re
-    content = response.choices[0].message.content
-    json_match = re.search(r'\{[\s\S]*\}', content)
-    if json_match:
-        try:
+    try:
+        response = model.generate_content(prompt)
+        content = response.text
+        content = re.sub(r'```json\s*', '', content)
+        content = re.sub(r'```\s*', '', content)
+        json_match = re.search(r'\{[\s\S]*\}', content)
+        if json_match:
             return json.loads(json_match.group())
-        except:
-            pass
-    return {"input_output": content[:200], "problem": "", "solution": ""}
+    except Exception as e:
+        print(f"  Error: {e}")
+    
+    return {"input_output": "", "problem": "", "solution": ""}
 
 def generate_report(papers, summaries, date_str, output_dir="output"):
     os.makedirs(output_dir, exist_ok=True)
@@ -165,12 +163,13 @@ def generate_report(papers, summaries, date_str, output_dir="output"):
     return output_file
 
 def main(date_str=None, top_n=None, keywords=None, notion_db=None, tags=None):
-    api_key = os.getenv('OPENAI_API_KEY')
+    api_key = os.getenv('GEMINI_API_KEY')
     if not api_key:
-        raise ValueError("OPENAI_API_KEY not set")
+        raise ValueError("GEMINI_API_KEY not set")
     
-    client = OpenAI(api_key=api_key)
-    model = os.getenv('LLM_MODEL', 'gpt-4o-mini')
+    genai.configure(api_key=api_key)
+    model = genai.GenerativeModel('gemini-2.0-flash-exp')
+    print(f"Using model: Gemini 2.0 Flash")
     
     print(f"Fetching papers for {date_str or 'today'}...")
     papers = get_papers(date_str)
@@ -198,7 +197,7 @@ def main(date_str=None, top_n=None, keywords=None, notion_db=None, tags=None):
     summaries = []
     for i, paper in enumerate(papers, 1):
         print(f"Summarizing {i}/{len(papers)}: {paper['title'][:50]}...")
-        summary = summarize_paper(client, paper, model)
+        summary = summarize_paper(model, paper)
         summaries.append(summary)
     
     if date_str is None:

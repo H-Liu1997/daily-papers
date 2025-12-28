@@ -25,7 +25,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install requests openai pytz tenacity notion-client tqdm
+          pip install requests google-generativeai pytz notion-client
       
       - name: Download paper metadata
         run: |
@@ -37,7 +37,7 @@ jobs:
       
       - name: Run paper summarizer
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
         run: |
           if [ -n "${{ github.event.inputs.date }}" ]; then
