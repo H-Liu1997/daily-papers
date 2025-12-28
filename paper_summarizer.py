@@ -108,35 +108,60 @@ def is_chinese(text):
 
 def summarize_paper(model, paper, max_retries=2):
     import re
-    prompt = f"""Summarize this paper in Chinese. Be technical and objective.
+    
+    prompt1 = f"""Extract technical details from this paper abstract. Return JSON:
 
 Title: {paper['title']}
-
 Abstract: {paper['abstract']}
 
-Return ONLY valid JSON in Chinese:
 {{
-  "input_output": "Task input and output. Example: input is text+image, output is video. Mention backbone/dataset if stated. 1-2 sentences.",
-  "problem": "What specific problem does this solve? What limitation existed before? 1-2 sentences.", 
-  "solution": "Technical approach: what method/architecture/training strategy is used? Be specific about key components. 2-4 sentences."
+  "task_type": "generation/understanding/other",
+  "input_modality": "text/image/video/audio/...",
+  "output_modality": "text/image/video/...",
+  "backbone": "model name if mentioned, else null",
+  "dataset": "dataset name if mentioned, else null",
+  "key_numbers": "any specific numbers like frames, resolution, etc.",
+  "core_technique": "main technical contribution in 1 sentence"
+}}"""
+
+    prompt2 = f"""Based on the paper, write a technical summary in Chinese.
+
+Title: {paper['title']}
+Abstract: {paper['abstract']}
+
+Return ONLY valid JSON in Chinese (all values must be plain text strings, not nested objects):
+{{
+  "input_output": "任务类型(生成/理解)。输入: xxx。输出: xxx。Backbone: xxx(如有)。数据集: xxx(如有)。",
+  "problem": "具体要解决什么问题，之前方法的局限性是什么。2-3句话。",
+  "solution": "1. 架构: xxx。2. 训练方法: xxx。3. 关键创新: xxx。4. 结果: xxx(如有具体指标)。用纯文本，不要嵌套结构。"
 }}
 
 Requirements:
-- Write in Chinese
-- Be technical and precise
-- Mention specific model names, datasets, techniques
-- No metaphors or analogies
-- State concrete numbers (frames, resolution, etc.) if available"""
+- 必须用中文
+- 所有值必须是纯文本字符串
+- 技术细节要具体，如模型名称、训练策略
+- 提及具体数字(帧数、分辨率、性能指标等)"""
 
     for attempt in range(max_retries + 1):
         try:
-            response = model.generate_content(prompt)
+            try:
+                resp1 = model.generate_content(prompt1)
+                _ = resp1.text
+            except:
+                pass
+            
+            response = model.generate_content(prompt2)
             content = response.text
             content = re.sub(r'```json\s*', '', content)
             content = re.sub(r'```\s*', '', content)
             json_match = re.search(r'\{[\s\S]*\}', content)
             if json_match:
                 result = json.loads(json_match.group())
+                for k, v in result.items():
+                    if isinstance(v, dict):
+                        result[k] = ' '.join([f"{sk}: {sv}" for sk, sv in v.items()])
+                    elif isinstance(v, list):
+                        result[k] = ' '.join([str(item) for item in v])
                 all_text = ' '.join([str(v) for v in result.values()])
                 if is_chinese(all_text):
                     return result
