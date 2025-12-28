@@ -100,36 +100,54 @@ def get_papers(date_str=None):
     valid_papers.sort(key=lambda x: x['upvotes'], reverse=True)
     return valid_papers
 
-def summarize_paper(model, paper):
+def is_chinese(text):
+    if not text:
+        return False
+    chinese_chars = sum(1 for c in text if '\u4e00' <= c <= '\u9fff')
+    return chinese_chars > len(text) * 0.1
+
+def summarize_paper(model, paper, max_retries=2):
     import re
-    prompt = f"""Read this paper abstract. Explain it like you're telling a friend - no jargon, no paper-speak.
+    prompt = f"""Summarize this paper in Chinese. Be technical and objective.
 
 Title: {paper['title']}
 
 Abstract: {paper['abstract']}
 
-Answer in Chinese, in plain human language. Return ONLY valid JSON:
+Return ONLY valid JSON in Chinese:
 {{
-  "input_output": "What goes in and out? Give a concrete example. 1-2 sentences.",
-  "problem": "What couldn't we do before? Why does it matter? 1-2 sentences.", 
-  "solution": "What's the core idea? How does it work simply? 2-3 sentences."
+  "input_output": "Task input and output. Example: input is text+image, output is video. Mention backbone/dataset if stated. 1-2 sentences.",
+  "problem": "What specific problem does this solve? What limitation existed before? 1-2 sentences.", 
+  "solution": "Technical approach: what method/architecture/training strategy is used? Be specific about key components. 2-4 sentences."
 }}
 
-Rules:
-- NO academic jargon like "proposed", "leverages", "achieves SOTA"
-- Use everyday analogies
-- Be specific and concrete"""
+Requirements:
+- Write in Chinese
+- Be technical and precise
+- Mention specific model names, datasets, techniques
+- No metaphors or analogies
+- State concrete numbers (frames, resolution, etc.) if available"""
 
-    try:
-        response = model.generate_content(prompt)
-        content = response.text
-        content = re.sub(r'```json\s*', '', content)
-        content = re.sub(r'```\s*', '', content)
-        json_match = re.search(r'\{[\s\S]*\}', content)
-        if json_match:
-            return json.loads(json_match.group())
-    except Exception as e:
-        print(f"  Error: {e}")
+    for attempt in range(max_retries + 1):
+        try:
+            response = model.generate_content(prompt)
+            content = response.text
+            content = re.sub(r'```json\s*', '', content)
+            content = re.sub(r'```\s*', '', content)
+            json_match = re.search(r'\{[\s\S]*\}', content)
+            if json_match:
+                result = json.loads(json_match.group())
+                all_text = ' '.join([str(v) for v in result.values()])
+                if is_chinese(all_text):
+                    return result
+                elif attempt < max_retries:
+                    print(f"  Retry {attempt+1}: output not in Chinese")
+                    continue
+                else:
+                    print(f"  Warning: output not in Chinese after {max_retries+1} attempts")
+                    return result
+        except Exception as e:
+            print(f"  Error: {e}")
     
     return {"input_output": "", "problem": "", "solution": ""}
 
