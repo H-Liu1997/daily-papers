@@ -20,13 +20,16 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install requests openai pytz
+          pip install requests openai pytz tenacity notion-client tqdm
+      
+      - name: Download paper metadata
+        run: |
+          python Paper_metadata_download.py
       
       - name: Run paper summarizer
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
-          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
         run: |
-          python paper_summarizer.py --top 10 --notion "$NOTION_DATABASE_ID"
+          python paper_summarizer.py --top 10 --notion "${{ secrets.NOTION_DATABASE_ID }}"
 
