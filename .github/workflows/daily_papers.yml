@@ -1,0 +1,32 @@
+name: Daily Papers Sync
+
+on:
+  schedule:
+    # Run at 9:00 AM Beijing Time (1:00 AM UTC)
+    - cron: '0 1 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  sync-papers:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install requests openai pytz
+      
+      - name: Run paper summarizer
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        run: |
+          python paper_summarizer.py --top 10 --notion "$NOTION_DATABASE_ID"
+

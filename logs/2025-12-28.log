@@ -1,0 +1,649 @@
+2025-12-28 22:22:14,822 - INFO - 正在获取 2025-12-28 的论文数据
+2025-12-28 22:22:15,032 - INFO - API返回原始数据数量: 0
+2025-12-28 22:22:15,032 - WARNING - 2025-12-28 没有可用的论文数据
+2025-12-28 22:22:15,032 - INFO - 下载结果: {'status': 'no_data', 'date': '2025-12-28'}
+2025-12-28 22:22:20,793 - INFO - 正在获取 2025-12-26 的论文数据
+2025-12-28 22:22:20,968 - INFO - API返回原始数据数量: 7
+2025-12-28 22:22:20,968 - INFO - 原始数据: 7篇
+2025-12-28 22:22:20,968 - INFO - 有效论文: 7篇
+2025-12-28 22:22:20,968 - INFO - 跳过论文: 0篇
+2025-12-28 22:22:20,969 - INFO - 成功保存 7 篇有效论文数据到文件
+2025-12-28 22:22:20,969 - INFO - 下载结果: {'status': 'success', 'date': '2025-12-26'}
+2025-12-28 22:31:47,370 - INFO - 使用 OpenAI API
+2025-12-28 22:31:47,413 - INFO - 正在处理 2025-12-26 的论文数据
+2025-12-28 22:31:47,413 - INFO - 读取到 7 篇论文数据
+2025-12-28 22:31:47,413 - INFO - 正在处理第 1/7 篇论文
+2025-12-28 22:31:47,413 - INFO - 正在翻译第 1 篇论文 (尝试 1/3)
+2025-12-28 22:31:47,413 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:31:48,994 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:31:49,000 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:31:49,000 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:31:53,006 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:31:53,861 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:31:53,863 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:31:53,863 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:31:57,869 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:31:58,555 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:31:58,557 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:31:58,557 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:31:58,558 - WARNING - 第 1 篇论文翻译失败，将在 2 秒后重试: RetryError[<Future at 0x10ef456d0 state=finished raised NotFoundError>]
+2025-12-28 22:32:00,560 - INFO - 正在翻译第 1 篇论文 (尝试 2/3)
+2025-12-28 22:32:00,561 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:01,505 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:01,505 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:01,505 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:05,510 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:05,675 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:05,676 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:05,676 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:09,680 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:09,865 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:09,867 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:09,867 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:09,867 - WARNING - 第 1 篇论文翻译失败，将在 4 秒后重试: RetryError[<Future at 0x10efbcdd0 state=finished raised NotFoundError>]
+2025-12-28 22:32:13,872 - INFO - 正在翻译第 1 篇论文 (尝试 3/3)
+2025-12-28 22:32:13,873 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:14,091 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:14,093 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:14,093 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:18,094 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:18,264 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:18,265 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:18,265 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:22,271 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:22,466 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:22,467 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:22,467 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:22,467 - ERROR - 处理第 1 篇论文时发生错误: RetryError[<Future at 0x10f954d50 state=finished raised NotFoundError>]
+2025-12-28 22:32:22,468 - INFO - 正在处理第 2/7 篇论文
+2025-12-28 22:32:22,468 - INFO - 正在翻译第 2 篇论文 (尝试 1/3)
+2025-12-28 22:32:22,468 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:22,660 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:22,661 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:22,661 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:26,663 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:26,836 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:26,838 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:26,838 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:30,843 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:31,031 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:31,032 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:31,032 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:31,032 - WARNING - 第 2 篇论文翻译失败，将在 2 秒后重试: RetryError[<Future at 0x10f93eb70 state=finished raised NotFoundError>]
+2025-12-28 22:32:33,037 - INFO - 正在翻译第 2 篇论文 (尝试 2/3)
+2025-12-28 22:32:33,038 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:33,832 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:33,835 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:33,835 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:37,839 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:38,054 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:38,055 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:38,055 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:42,056 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:42,254 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:42,256 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:42,256 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:42,256 - WARNING - 第 2 篇论文翻译失败，将在 4 秒后重试: RetryError[<Future at 0x10effcae0 state=finished raised NotFoundError>]
+2025-12-28 22:32:46,258 - INFO - 正在翻译第 2 篇论文 (尝试 3/3)
+2025-12-28 22:32:46,259 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:47,127 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:47,127 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:47,127 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:51,133 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:51,322 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:51,323 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:51,323 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:55,328 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:55,500 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:55,502 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:55,502 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:55,502 - ERROR - 处理第 2 篇论文时发生错误: RetryError[<Future at 0x10f918470 state=finished raised NotFoundError>]
+2025-12-28 22:32:55,503 - INFO - 正在处理第 3/7 篇论文
+2025-12-28 22:32:55,503 - INFO - 正在翻译第 3 篇论文 (尝试 1/3)
+2025-12-28 22:32:55,503 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:55,710 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:55,711 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:55,711 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:32:59,717 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:32:59,919 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:32:59,920 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:32:59,920 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:03,926 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:04,106 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:04,107 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:04,107 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:04,107 - WARNING - 第 3 篇论文翻译失败，将在 2 秒后重试: RetryError[<Future at 0x10f921810 state=finished raised NotFoundError>]
+2025-12-28 22:33:06,109 - INFO - 正在翻译第 3 篇论文 (尝试 2/3)
+2025-12-28 22:33:06,110 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:06,296 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:06,298 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:06,298 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:10,303 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:11,464 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:11,465 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:11,466 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:15,471 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:15,686 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:15,688 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:15,688 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:15,688 - WARNING - 第 3 篇论文翻译失败，将在 4 秒后重试: RetryError[<Future at 0x10f9644d0 state=finished raised NotFoundError>]
+2025-12-28 22:33:19,692 - INFO - 正在翻译第 3 篇论文 (尝试 3/3)
+2025-12-28 22:33:19,692 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:19,906 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:19,907 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:19,908 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:23,910 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:24,097 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:24,098 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:24,098 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:28,099 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:28,274 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:28,275 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:28,275 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:28,276 - ERROR - 处理第 3 篇论文时发生错误: RetryError[<Future at 0x10f966e50 state=finished raised NotFoundError>]
+2025-12-28 22:33:28,276 - INFO - 正在处理第 4/7 篇论文
+2025-12-28 22:33:28,276 - INFO - 正在翻译第 4 篇论文 (尝试 1/3)
+2025-12-28 22:33:28,276 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:28,464 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:28,464 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:28,464 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:32,467 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:32,779 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:32,780 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:32,780 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:36,785 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:36,966 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:36,967 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:36,967 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:36,967 - WARNING - 第 4 篇论文翻译失败，将在 2 秒后重试: RetryError[<Future at 0x10f967ed0 state=finished raised NotFoundError>]
+2025-12-28 22:33:38,971 - INFO - 正在翻译第 4 篇论文 (尝试 2/3)
+2025-12-28 22:33:38,972 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:39,171 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:39,172 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:39,172 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:43,178 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:43,406 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:43,407 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:43,407 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:47,408 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:47,585 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:47,587 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:47,587 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:47,587 - WARNING - 第 4 篇论文翻译失败，将在 4 秒后重试: RetryError[<Future at 0x10f98cfd0 state=finished raised NotFoundError>]
+2025-12-28 22:33:51,589 - INFO - 正在翻译第 4 篇论文 (尝试 3/3)
+2025-12-28 22:33:51,590 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:51,929 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:51,930 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:51,930 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:33:55,932 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:33:56,106 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:33:56,107 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:33:56,107 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:00,110 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:00,300 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:00,302 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:00,302 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:00,303 - ERROR - 处理第 4 篇论文时发生错误: RetryError[<Future at 0x10f967850 state=finished raised NotFoundError>]
+2025-12-28 22:34:00,303 - INFO - 正在处理第 5/7 篇论文
+2025-12-28 22:34:00,303 - INFO - 正在翻译第 5 篇论文 (尝试 1/3)
+2025-12-28 22:34:00,303 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:00,478 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:00,479 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:00,479 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:04,484 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:04,650 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:04,651 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:04,651 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:08,654 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:08,831 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:08,832 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:08,832 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:08,833 - WARNING - 第 5 篇论文翻译失败，将在 2 秒后重试: RetryError[<Future at 0x10f964350 state=finished raised NotFoundError>]
+2025-12-28 22:34:10,836 - INFO - 正在翻译第 5 篇论文 (尝试 2/3)
+2025-12-28 22:34:10,836 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:10,996 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:10,997 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:10,998 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:15,000 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:15,167 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:15,168 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:15,168 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:19,172 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:19,558 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:19,559 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:19,559 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:19,559 - WARNING - 第 5 篇论文翻译失败，将在 4 秒后重试: RetryError[<Future at 0x10f965cd0 state=finished raised NotFoundError>]
+2025-12-28 22:34:23,563 - INFO - 正在翻译第 5 篇论文 (尝试 3/3)
+2025-12-28 22:34:23,564 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:23,747 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:23,748 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:23,748 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:27,751 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:27,941 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:27,942 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:27,942 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:31,944 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:32,146 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:32,147 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:32,147 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:32,147 - ERROR - 处理第 5 篇论文时发生错误: RetryError[<Future at 0x10f9646d0 state=finished raised NotFoundError>]
+2025-12-28 22:34:32,147 - INFO - 正在处理第 6/7 篇论文
+2025-12-28 22:34:32,147 - INFO - 正在翻译第 6 篇论文 (尝试 1/3)
+2025-12-28 22:34:32,147 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:32,339 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:32,340 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:32,340 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:36,345 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:36,511 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:36,513 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:36,513 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:40,518 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:40,692 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:40,694 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:40,694 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:40,694 - WARNING - 第 6 篇论文翻译失败，将在 2 秒后重试: RetryError[<Future at 0x10f929ad0 state=finished raised NotFoundError>]
+2025-12-28 22:34:42,697 - INFO - 正在翻译第 6 篇论文 (尝试 2/3)
+2025-12-28 22:34:42,697 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:42,923 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:42,924 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:42,924 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:46,928 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:47,149 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:47,150 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:47,150 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:51,151 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:51,324 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:51,325 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:51,325 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:51,325 - WARNING - 第 6 篇论文翻译失败，将在 4 秒后重试: RetryError[<Future at 0x10f92a8d0 state=finished raised NotFoundError>]
+2025-12-28 22:34:55,331 - INFO - 正在翻译第 6 篇论文 (尝试 3/3)
+2025-12-28 22:34:55,331 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:55,495 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:55,495 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:55,495 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:34:59,501 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:34:59,668 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:34:59,669 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:34:59,669 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:35:03,672 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:35:03,862 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:35:03,863 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:35:03,864 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:35:03,864 - ERROR - 处理第 6 篇论文时发生错误: RetryError[<Future at 0x10f98cf50 state=finished raised NotFoundError>]
+2025-12-28 22:35:03,864 - INFO - 正在处理第 7/7 篇论文
+2025-12-28 22:35:03,864 - INFO - 正在翻译第 7 篇论文 (尝试 1/3)
+2025-12-28 22:35:03,865 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:35:04,045 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:35:04,046 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:35:04,046 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:35:08,050 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:35:08,237 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:35:08,238 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:35:08,238 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:35:12,239 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:35:12,412 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:35:12,413 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:35:12,413 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:35:12,413 - WARNING - 第 7 篇论文翻译失败，将在 2 秒后重试: RetryError[<Future at 0x10f98e450 state=finished raised NotFoundError>]
+2025-12-28 22:35:14,419 - INFO - 正在翻译第 7 篇论文 (尝试 2/3)
+2025-12-28 22:35:14,419 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:35:14,611 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:35:14,613 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:35:14,613 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:35:18,618 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:35:18,844 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:35:18,846 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:35:18,846 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:35:22,847 - INFO - 使用模型: DeepSeek Chat
+2025-12-28 22:35:23,166 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-12-28 22:35:23,168 - ERROR - 如果您使用的是fork仓库，请确保已设置正确的DEEPSEEK_API_KEY
+2025-12-28 22:35:23,168 - ERROR - API 调用出错: Error code: 404 - {'error': {'message': 'The model `deepseek-chat` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-12-28 22:35:23,168 - WARNING - 第 7 篇论文翻译失败，将在 4 秒后重试: RetryError[<Future at 0x10f98f4d0 state=finished raised NotFoundError>]
+2025-12-28 22:36:27,007 - INFO - 使用 OpenAI API
+2025-12-28 22:36:27,036 - INFO - 正在处理 2025-12-26 的论文数据
+2025-12-28 22:36:27,036 - INFO - 读取到 7 篇论文数据
+2025-12-28 22:36:27,036 - INFO - 正在处理第 1/7 篇论文
+2025-12-28 22:36:27,036 - INFO - 正在翻译第 1 篇论文 (尝试 1/3)
+2025-12-28 22:36:27,036 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:36:32,435 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:36:32,453 - INFO - 第 1 篇论文处理成功
+2025-12-28 22:36:35,456 - INFO - 正在处理第 2/7 篇论文
+2025-12-28 22:36:35,457 - INFO - 正在翻译第 2 篇论文 (尝试 1/3)
+2025-12-28 22:36:35,457 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:36:41,811 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:36:41,814 - INFO - 第 2 篇论文处理成功
+2025-12-28 22:36:44,819 - INFO - 正在处理第 3/7 篇论文
+2025-12-28 22:36:44,820 - INFO - 正在翻译第 3 篇论文 (尝试 1/3)
+2025-12-28 22:36:44,820 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:36:48,642 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:36:48,654 - INFO - 第 3 篇论文处理成功
+2025-12-28 22:36:51,658 - INFO - 正在处理第 4/7 篇论文
+2025-12-28 22:36:51,658 - INFO - 正在翻译第 4 篇论文 (尝试 1/3)
+2025-12-28 22:36:51,659 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:36:56,305 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:36:56,311 - INFO - 第 4 篇论文处理成功
+2025-12-28 22:36:59,313 - INFO - 正在处理第 5/7 篇论文
+2025-12-28 22:36:59,314 - INFO - 正在翻译第 5 篇论文 (尝试 1/3)
+2025-12-28 22:36:59,314 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:37:03,451 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:37:03,458 - INFO - 第 5 篇论文处理成功
+2025-12-28 22:37:06,463 - INFO - 正在处理第 6/7 篇论文
+2025-12-28 22:37:06,463 - INFO - 正在翻译第 6 篇论文 (尝试 1/3)
+2025-12-28 22:37:06,463 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:37:16,936 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:37:16,939 - INFO - 第 6 篇论文处理成功
+2025-12-28 22:37:19,939 - INFO - 正在处理第 7/7 篇论文
+2025-12-28 22:37:19,940 - INFO - 正在翻译第 7 篇论文 (尝试 1/3)
+2025-12-28 22:37:19,940 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:37:25,693 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:37:25,698 - INFO - 第 7 篇论文处理成功
+2025-12-28 22:37:28,701 - INFO - 论文处理统计：总数 7，成功 7，失败 0
+2025-12-28 22:37:28,916 - INFO - 开始分析论文数据，时间范围：2025-12-21 至 2025-12-28
+2025-12-28 22:37:28,918 - INFO - 处理 2025-12-26 的数据：找到 7 篇论文
+2025-12-28 22:37:28,918 - DEBUG - Building prefix dict from the default dictionary ...
+2025-12-28 22:37:29,159 - DEBUG - Dumping model to file cache /var/folders/c4/qc7q4bj10tv09c20mfqk_g7c0000gn/T/jieba.cache
+2025-12-28 22:37:29,186 - DEBUG - Loading model cost 0.268 seconds.
+2025-12-28 22:37:29,186 - DEBUG - Prefix dict has been built successfully.
+2025-12-28 22:37:30,527 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-28 22:37:30,527 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-28 22:37:30,528 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-28 22:37:30,529 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-28 22:37:30,534 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,536 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,537 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,537 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,537 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,537 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,537 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,537 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,538 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,540 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,541 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,544 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,544 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,544 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,545 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,545 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,545 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,546 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,549 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,550 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,551 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,558 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,558 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,558 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,558 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,558 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,559 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,561 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,562 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,569 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,569 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,569 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,569 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,569 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,569 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,570 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,570 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,570 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,571 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,571 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,572 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,572 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,572 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,572 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,572 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,572 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,572 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,573 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,575 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,577 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,579 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,579 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,579 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,579 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,579 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,580 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,580 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,585 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,604 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,604 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,604 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,604 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,604 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,604 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,604 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,605 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,605 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,605 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,605 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,607 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,607 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,607 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,607 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,607 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,608 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,608 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,608 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,608 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,609 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,610 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,610 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,611 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,612 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,612 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,613 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,614 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,614 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,615 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,615 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,616 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,616 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,616 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,617 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,618 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,619 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,620 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,621 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,622 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,622 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,622 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,622 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,622 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,623 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,623 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,625 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,625 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,626 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,627 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,627 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,628 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,629 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,629 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,630 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,631 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,632 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,632 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,632 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,633 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,633 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,634 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,635 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,635 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,636 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:37:30,841 - ERROR - 生成统计图表时出错：cannot open resource
+2025-12-28 22:37:30,847 - INFO - 日报已生成：newsletters/2025-12-26_daily_paper.md
+2025-12-28 22:38:19,356 - INFO - 使用 OpenAI API
+2025-12-28 22:38:19,385 - INFO - 正在处理 2025-12-26 的论文数据
+2025-12-28 22:38:19,385 - INFO - 读取到 7 篇论文数据
+2025-12-28 22:38:19,385 - INFO - 正在处理第 1/7 篇论文
+2025-12-28 22:38:19,385 - INFO - 正在翻译第 1 篇论文 (尝试 1/3)
+2025-12-28 22:38:19,385 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:38:23,768 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:38:23,781 - INFO - 第 1 篇论文处理成功
+2025-12-28 22:38:26,787 - INFO - 正在处理第 2/7 篇论文
+2025-12-28 22:38:26,787 - INFO - 正在翻译第 2 篇论文 (尝试 1/3)
+2025-12-28 22:38:26,788 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:38:34,198 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:38:34,205 - INFO - 第 2 篇论文处理成功
+2025-12-28 22:38:37,210 - INFO - 正在处理第 3/7 篇论文
+2025-12-28 22:38:37,211 - INFO - 正在翻译第 3 篇论文 (尝试 1/3)
+2025-12-28 22:38:37,211 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:38:41,824 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:38:41,827 - INFO - 第 3 篇论文处理成功
+2025-12-28 22:38:44,832 - INFO - 正在处理第 4/7 篇论文
+2025-12-28 22:38:44,833 - INFO - 正在翻译第 4 篇论文 (尝试 1/3)
+2025-12-28 22:38:44,833 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:38:49,925 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:38:49,931 - INFO - 第 4 篇论文处理成功
+2025-12-28 22:38:52,932 - INFO - 正在处理第 5/7 篇论文
+2025-12-28 22:38:52,932 - INFO - 正在翻译第 5 篇论文 (尝试 1/3)
+2025-12-28 22:38:52,933 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:38:56,966 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:38:56,971 - INFO - 第 5 篇论文处理成功
+2025-12-28 22:38:59,972 - INFO - 正在处理第 6/7 篇论文
+2025-12-28 22:38:59,973 - INFO - 正在翻译第 6 篇论文 (尝试 1/3)
+2025-12-28 22:38:59,973 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:39:07,810 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:39:07,815 - INFO - 第 6 篇论文处理成功
+2025-12-28 22:39:10,821 - INFO - 正在处理第 7/7 篇论文
+2025-12-28 22:39:10,821 - INFO - 正在翻译第 7 篇论文 (尝试 1/3)
+2025-12-28 22:39:10,822 - INFO - 使用模型: GPT-4o Mini
+2025-12-28 22:39:16,537 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-28 22:39:16,540 - INFO - 第 7 篇论文处理成功
+2025-12-28 22:39:19,545 - INFO - 论文处理统计：总数 7，成功 7，失败 0
+2025-12-28 22:39:19,744 - INFO - 开始分析论文数据，时间范围：2025-12-21 至 2025-12-28
+2025-12-28 22:39:19,745 - INFO - 处理 2025-12-26 的数据：找到 7 篇论文
+2025-12-28 22:39:19,745 - DEBUG - Building prefix dict from the default dictionary ...
+2025-12-28 22:39:19,745 - DEBUG - Loading model from cache /var/folders/c4/qc7q4bj10tv09c20mfqk_g7c0000gn/T/jieba.cache
+2025-12-28 22:39:20,030 - DEBUG - Loading model cost 0.285 seconds.
+2025-12-28 22:39:20,030 - DEBUG - Prefix dict has been built successfully.
+2025-12-28 22:39:20,180 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-28 22:39:20,180 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-28 22:39:20,181 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-28 22:39:20,182 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-12-28 22:39:20,188 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,190 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,190 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,190 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,191 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,191 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,191 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,191 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,191 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,194 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,195 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,198 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,198 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,198 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,198 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,199 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,199 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,199 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,202 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,204 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,205 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,212 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,212 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,212 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,212 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,213 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,213 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,215 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,216 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,224 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,224 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,225 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,225 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,225 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,225 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,225 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,226 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,226 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,226 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,226 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,227 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,227 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,227 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,228 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,228 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,228 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,228 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,228 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,230 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,233 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,234 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,234 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,235 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,235 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,235 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,235 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,236 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,240 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,260 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,261 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,261 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,261 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,261 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,261 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,261 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,262 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,262 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,262 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,262 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,264 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,264 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,264 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,265 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,265 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,265 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,265 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,265 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,266 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,266 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,267 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,268 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,268 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,269 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,270 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,270 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,271 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,272 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,273 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,273 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,273 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,274 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,274 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,274 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,275 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,277 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,277 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,278 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,279 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,279 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,279 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,280 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,280 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,280 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,281 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,283 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,283 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,284 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,285 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,285 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,286 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,287 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,287 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,288 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,289 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,290 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,290 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,290 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,291 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,291 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,292 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,293 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,293 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,295 - WARNING - findfont: Generic family 'sans-serif' not found because none of the following families were found: WenQuanYi Zenhei, Noto Sans CJK JP
+2025-12-28 22:39:20,499 - ERROR - 生成统计图表时出错：cannot open resource
+2025-12-28 22:39:20,504 - INFO - 日报已生成：newsletters/2025-12-26_daily_paper.md

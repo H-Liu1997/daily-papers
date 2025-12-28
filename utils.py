@@ -8,9 +8,10 @@ import base64
 from functools import wraps
 
 # 默认配置
-DEFAULT_MODEL = "deepseek-chat"
 SUPPORTED_MODELS = {
     "deepseek-chat": "DeepSeek Chat",
+    "gpt-4o-mini": "GPT-4o Mini",
+    "gpt-4o": "GPT-4o",
 }
 
 def setup_logger():
@@ -49,29 +50,26 @@ def validate_api_key(api_key):
 
 def get_model_name():
     """获取要使用的模型名称"""
-    return DEFAULT_MODEL  # 直接返回默认模型
+    return os.getenv('LLM_MODEL', 'deepseek-chat')
 
 def require_auth(func):
     """验证装饰器"""
     @wraps(func)
     def wrapper(*args, **kwargs):
-        api_key = os.getenv('DEEPSEEK_API_KEY')
+        api_key = os.getenv('DEEPSEEK_API_KEY') or os.getenv('OPENAI_API_KEY')
         if not api_key:
-            raise ValueError("未设置 DEEPSEEK_API_KEY 环境变量。如果这是一个fork的仓库，请在仓库的Settings->Secrets->Actions中设置您自己的DEEPSEEK_API_KEY。")
+            raise ValueError("未设置 API KEY 环境变量。请设置 DEEPSEEK_API_KEY 或 OPENAI_API_KEY。")
         
-        # 验证API Key
         if not validate_api_key(api_key):
             raise ValueError("无效的 API Key 格式")
         
-        # 如果是原始仓库，直接允许访问
         if is_original_repo():
             return func(*args, **kwargs)
         
-        # 如果是fork的仓库，确保使用的是自己的API Key
-        if api_key.startswith('sk-'):  # 假设这是一个新的API Key
+        if api_key.startswith('sk-'):
             return func(*args, **kwargs)
         else:
-            raise ValueError("Fork仓库必须使用自己的API Key。请在仓库的Settings->Secrets->Actions中设置您自己的DEEPSEEK_API_KEY。")
+            raise ValueError("请使用有效的 API Key。")
         
     return wrapper
 

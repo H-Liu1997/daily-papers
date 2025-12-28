@@ -24,19 +24,19 @@ logger = setup_logger()
 @require_auth
 def init_api_client():
     """初始化并返回API客户端"""
-    # 获取并验证 API Key
-    api_key = os.getenv('DEEPSEEK_API_KEY')
-    if not api_key:
-        if is_original_repo():
-            raise ValueError("原始仓库中未设置 DEEPSEEK_API_KEY 环境变量")
-        else:
-            raise ValueError("Fork仓库需要在 Settings -> Secrets -> Actions 中设置您自己的 DEEPSEEK_API_KEY")
+    deepseek_key = os.getenv('DEEPSEEK_API_KEY')
+    openai_key = os.getenv('OPENAI_API_KEY')
     
-    # 初始化客户端
-    return OpenAI(
-        api_key=api_key,
-        base_url="https://api.deepseek.com/v1"
-    )
+    if openai_key:
+        logger.info("使用 OpenAI API")
+        os.environ['LLM_MODEL'] = os.getenv('LLM_MODEL', 'gpt-4o-mini')
+        return OpenAI(api_key=openai_key)
+    elif deepseek_key:
+        logger.info("使用 DeepSeek API")
+        os.environ['LLM_MODEL'] = 'deepseek-chat'
+        return OpenAI(api_key=deepseek_key, base_url="https://api.deepseek.com/v1")
+    else:
+        raise ValueError("请设置 OPENAI_API_KEY 或 DEEPSEEK_API_KEY")
 
 # 获取验证后的客户端
 try:
