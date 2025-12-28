@@ -23,11 +23,11 @@ def sync_to_notion(papers, summaries, database_id, tags=None, date_str=None):
     
     for paper, summary in zip(papers, summaries):
         if isinstance(summary, dict):
-            input_output = summary.get('input_output', '')[:2000]
-            problem = summary.get('problem', '')[:2000]
-            solution = summary.get('solution', '')[:2000]
+            input_output = (summary.get('input_output') or '')[:2000]
+            problem = (summary.get('problem') or '')[:2000]
+            solution = (summary.get('solution') or '')[:2000]
         else:
-            input_output = str(summary)[:2000]
+            input_output = str(summary)[:2000] if summary else ""
             problem = ""
             solution = ""
         
