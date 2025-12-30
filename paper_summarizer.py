@@ -75,7 +75,8 @@ def sync_to_notion(papers, summaries, database_id, date_str=None):
 def get_papers(date_str=None):
     if date_str is None:
         beijing_tz = pytz.timezone('Asia/Shanghai')
-        date_str = datetime.datetime.now(beijing_tz).strftime('%Y-%m-%d')
+        yesterday = datetime.datetime.now(beijing_tz) - datetime.timedelta(days=1)
+        date_str = yesterday.strftime('%Y-%m-%d')
     
     url = f"https://huggingface.co/api/daily_papers?date={date_str}"
     response = requests.get(url)

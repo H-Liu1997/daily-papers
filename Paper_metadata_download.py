@@ -17,11 +17,11 @@ def download_papers(date_str=None):
         date_str: 可选，指定要下载的日期，格式为YYYY-MM-DD。如果不指定，则使用当前日期。
     """
     try:
-        # 如果没有指定日期，使用北京时间当前日期
+        # 如果没有指定日期，使用北京时间昨天日期（因为今天的论文可能还没发布）
         if date_str is None:
             beijing_tz = pytz.timezone('Asia/Shanghai')
-            current_time = datetime.datetime.now(beijing_tz)
-            date_str = current_time.strftime('%Y-%m-%d')
+            yesterday = datetime.datetime.now(beijing_tz) - datetime.timedelta(days=1)
+            date_str = yesterday.strftime('%Y-%m-%d')
         
         logger.info(f"正在获取 {date_str} 的论文数据")
         
